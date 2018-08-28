@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 
 # Base dependencies
 RUN apt-get update \
+ && DEBIAN_FRONTEND=noninteractive sudo apt-get install -y tzdata \
  && apt-get install -y apt-utils dialog \
  && apt-get update \
  && apt-get install -y software-properties-common \
